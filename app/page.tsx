@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const CONTACT =
-  "https://docs.google.com/forms/d/e/1FAIpQLSdLIzrmMJgARKKnqpt3S4LBiwLy2vRBavnqhpwX6RqM64NETg/viewform?usp=preview";
+const CONTACT = "mailto:pragya@heyrubric.ai";
+const EXPERT = "https://interview.therubric.ai";
 
 function useInView() {
   const ref = useRef<HTMLElement>(null);
@@ -161,7 +161,7 @@ function Problem() {
           </p>
           <h2
             className="font-mono tracking-tight leading-snug"
-            style={{ fontSize: "clamp(1.7rem, 3.2vw, 2.6rem)" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
           >
             Crowdsourced feedback breaks down in specialized domains.
           </h2>
@@ -235,7 +235,7 @@ function WhatWeBuild() {
               <div className="space-y-4">
                 <h3
                   className="font-mono tracking-tight text-white"
-                  style={{ fontSize: "clamp(1.4rem, 2.5vw, 2rem)" }}
+                  style={{ fontSize: "clamp(1.7rem, 3vw, 2.6rem)" }}
                 >
                   {item.title}
                 </h3>
@@ -272,7 +272,7 @@ function Research() {
           <div className="flex items-start justify-between gap-6 flex-wrap">
             <h2
               className="font-mono tracking-tight leading-snug max-w-2xl"
-              style={{ fontSize: "clamp(1.7rem, 3.2vw, 2.6rem)" }}
+              style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
             >
               WHBench: A Women&rsquo;s Health Benchmark<br className="hidden md:block" /> for Evaluating Frontier LLMs
             </h2>
@@ -344,7 +344,7 @@ function Modalities() {
           </p>
           <h2
             className="font-mono tracking-tight text-white"
-            style={{ fontSize: "clamp(1.7rem, 3.2vw, 2.6rem)" }}
+            style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
           >
             Expert knowledge comes in many forms.
           </h2>
@@ -401,7 +401,7 @@ function Contact() {
             Talk to us →
           </a>
           <a
-            href="https://interview.therubric.ai"
+            href={EXPERT}
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-[11px] uppercase tracking-[0.18em] border border-black/25 text-black/55 px-8 py-4 hover:border-black hover:text-black transition-colors text-center"
@@ -422,7 +422,7 @@ function Footer() {
         <div className="flex items-center gap-5">
           <span className="font-mono font-bold text-sm">Rubric AI</span>
           <span className="text-black/15">·</span>
-          <span className="font-mono text-[11px] text-black/30">© 2025</span>
+          <span className="font-mono text-[11px] text-black/30">© 2026</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="font-mono text-[11px] text-black/30 tracking-wide">Backed by</span>
