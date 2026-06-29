@@ -49,13 +49,7 @@ function Nav() {
       }`}
     >
       <div className="max-w-[1120px] mx-auto px-6 md:px-10 h-14 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <span className="font-mono font-bold text-sm tracking-tight">Rubric AI</span>
-          <div className="flex items-center gap-1.5 border border-black/12 px-2.5 py-1 rounded-full">
-            <YCLogo size={13} />
-            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-black/45">Backed by Y Combinator</span>
-          </div>
-        </div>
+        <span className="font-mono font-bold text-sm tracking-tight">Rubric AI</span>
         <a
           href={CONTACT}
           target="_blank"
@@ -74,6 +68,12 @@ function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-between pt-14 px-6 md:px-10">
       <div className="max-w-[1120px] mx-auto w-full flex-1 flex flex-col justify-center py-24 md:py-0">
+        {/* YC badge */}
+        <div className="flex items-center gap-2 mb-8 fade-up" style={{ animationDelay: "0.05s" }}>
+          <YCLogo size={16} />
+          <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-black/45">Backed by Y Combinator</span>
+        </div>
+
         {/* headline */}
         <h1
           className="font-mono tracking-tight leading-[1.04] fade-up"
