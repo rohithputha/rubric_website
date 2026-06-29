@@ -21,6 +21,18 @@ function useInView() {
   return { ref: ref as React.RefObject<HTMLElement>, inView };
 }
 
+function YCLogo({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" aria-label="Y Combinator">
+      <rect width="48" height="48" fill="#FF6600" />
+      <path
+        d="M13.9 11.8h3.76l4.84 9.75c.71 1.45 1.3 2.86 1.3 2.86s.63-1.38 1.37-2.86l4.91-9.75h3.5l-8.3 15.59V37.3h-3.16V27.19L13.9 11.8z"
+        fill="white"
+      />
+    </svg>
+  );
+}
+
 /* ─── Nav ─────────────────────────────────────────────────────── */
 function Nav() {
   const [bg, setBg] = useState(false);
@@ -37,7 +49,7 @@ function Nav() {
       }`}
     >
       <div className="max-w-[1120px] mx-auto px-6 md:px-10 h-14 flex items-center justify-between">
-        <span className="font-mono font-bold text-sm tracking-tight">Rubric</span>
+        <span className="font-mono font-bold text-sm tracking-tight">Rubric AI</span>
         <a
           href={CONTACT}
           target="_blank"
@@ -56,18 +68,18 @@ function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-between pt-14 px-6 md:px-10">
       <div className="max-w-[1120px] mx-auto w-full flex-1 flex flex-col justify-center py-24 md:py-0">
-        {/* eyebrow */}
-        <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-black/35 mb-10 fade-up" style={{ animationDelay: "0.05s" }}>
-          Post-training infrastructure — Backed by Y Combinator
-        </p>
+        {/* eyebrow with YC logo */}
+        <div className="flex items-center gap-2.5 mb-10 fade-up" style={{ animationDelay: "0.05s" }}>
+          <YCLogo size={16} />
+          <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-black/35">
+            Post-training infrastructure
+          </span>
+        </div>
 
         {/* headline */}
         <h1
           className="font-mono tracking-tight leading-[1.04] fade-up"
-          style={{
-            fontSize: "clamp(2.6rem, 6.5vw, 5.6rem)",
-            animationDelay: "0.15s",
-          }}
+          style={{ fontSize: "clamp(2.6rem, 6.5vw, 5.6rem)", animationDelay: "0.15s" }}
         >
           Expert judgment,<br />
           structured for<br />
@@ -84,7 +96,7 @@ function Hero() {
           deliver it in formats that go directly into post-training pipelines.
         </p>
 
-        <div className="mt-10 flex items-center gap-6 fade-up" style={{ animationDelay: "0.38s" }}>
+        <div className="mt-10 fade-up" style={{ animationDelay: "0.38s" }}>
           <a
             href={CONTACT}
             target="_blank"
@@ -92,12 +104,6 @@ function Hero() {
             className="font-mono text-[11px] uppercase tracking-[0.18em] bg-black text-white px-6 py-3 hover:bg-black/80 transition-colors"
           >
             Talk to us →
-          </a>
-          <a
-            href="mailto:pragya@heyrubric.ai"
-            className="font-mono text-[11px] uppercase tracking-[0.18em] text-black/35 hover:text-black transition-colors"
-          >
-            pragya@heyrubric.ai
           </a>
         </div>
       </div>
@@ -153,13 +159,16 @@ function Problem() {
           <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-black/30">
             The problem
           </p>
-          <h2 className="font-mono text-2xl md:text-3xl tracking-tight leading-snug">
+          <h2
+            className="font-mono tracking-tight leading-snug"
+            style={{ fontSize: "clamp(1.7rem, 3.2vw, 2.6rem)" }}
+          >
             Crowdsourced feedback breaks down in specialized domains.
           </h2>
         </div>
         <div className="space-y-5 text-black/55 leading-[1.8]" style={{ fontSize: "clamp(0.95rem, 1.4vw, 1.05rem)" }}>
           <p>
-            Post-training — RLHF, DPO, supervised fine-tuning, RL — shapes how
+            Post-training (RLHF, DPO, supervised fine-tuning, RL) shapes how
             a model behaves on a specific task. The quality of that process
             depends entirely on the quality of human feedback driving it.
           </p>
@@ -189,7 +198,7 @@ function WhatWeBuild() {
     {
       n: "01",
       title: "Expert preference datasets",
-      body: "We source credentialed domain experts — physicians, attorneys, scientists, financial analysts — and run structured annotation workflows for RLHF and DPO. A doctor comparing two diagnostic plans. A lawyer ranking two contract analyses. Each judgment is logged with structured reasoning and delivered in standard formats.",
+      body: "We source credentialed domain experts (physicians, attorneys, scientists, financial analysts) and run structured annotation workflows for RLHF and DPO. A doctor comparing two diagnostic plans. A lawyer ranking two contract analyses. Each judgment is logged with structured reasoning and delivered in standard formats.",
     },
     {
       n: "02",
@@ -199,7 +208,7 @@ function WhatWeBuild() {
     {
       n: "03",
       title: "RL environments and reward infrastructure",
-      body: "For agentic tasks — a clinical documentation system, a legal research tool — you need a reward function. There's no unit test for \"is this clinical reasoning sound.\" We build the environments and expert-in-the-loop reward pipelines that let labs run policy gradient training on complex professional tasks.",
+      body: "For agentic tasks like a clinical documentation system or a legal research tool, you need a reward function. There's no unit test for \"is this clinical reasoning sound.\" We build the environments and expert-in-the-loop reward pipelines that let labs run policy gradient training on complex professional tasks.",
     },
   ];
 
@@ -226,7 +235,7 @@ function WhatWeBuild() {
               <div className="space-y-4">
                 <h3
                   className="font-mono tracking-tight text-white"
-                  style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)" }}
+                  style={{ fontSize: "clamp(1.4rem, 2.5vw, 2rem)" }}
                 >
                   {item.title}
                 </h3>
@@ -261,8 +270,11 @@ function Research() {
             Research
           </p>
           <div className="flex items-start justify-between gap-6 flex-wrap">
-            <h2 className="font-mono tracking-tight leading-snug max-w-2xl" style={{ fontSize: "clamp(1.4rem, 3vw, 2.2rem)" }}>
-              WHBench — A Women&rsquo;s Health Benchmark<br className="hidden md:block" /> for Evaluating Frontier LLMs
+            <h2
+              className="font-mono tracking-tight leading-snug max-w-2xl"
+              style={{ fontSize: "clamp(1.7rem, 3.2vw, 2.6rem)" }}
+            >
+              WHBench: A Women&rsquo;s Health Benchmark<br className="hidden md:block" /> for Evaluating Frontier LLMs
             </h2>
             <a
               href="/whbench-paper.pdf"
@@ -275,7 +287,6 @@ function Research() {
           </div>
         </div>
 
-        {/* Stats */}
         <div
           className={`grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-black/10 border border-black/10 transition-all duration-700 ${
             inView ? "fade-up opacity-100" : "opacity-0"
@@ -303,7 +314,7 @@ function Research() {
           }`}
           style={{ animationDelay: "0.25s", fontSize: "clamp(0.875rem, 1.3vw, 1rem)" }}
         >
-          Across 3,100 scored responses, no model mean exceeds 75% — with
+          Across 3,100 scored responses, no model mean exceeds 75%, with
           substantial safety and equity gaps across clinical topics. No widely
           adopted benchmark had previously evaluated frontier LLMs on
           women&rsquo;s health.
@@ -319,29 +330,38 @@ function Modalities() {
   const rows = [
     { label: "Text", desc: "Structured reasoning, preference pairs, rubric evaluations." },
     { label: "Voice", desc: "Spoken expert reasoning during clinical and legal encounters." },
-    { label: "Video", desc: "Egocentric recordings of procedural tasks — surgery, lab work, physical examination." },
+    { label: "Video", desc: "Egocentric recordings of procedural tasks: surgery, lab work, physical examination." },
     { label: "Multimodal", desc: "Cross-modal datasets combining text, image, audio, and action." },
   ];
   return (
     <section ref={ref} className="py-28 md:py-40 px-6 md:px-10 bg-black text-white">
       <div className="max-w-[1120px] mx-auto">
-        <p
-          className={`font-mono text-[11px] uppercase tracking-[0.28em] text-white/25 mb-16 transition-all duration-700 ${
-            inView ? "fade-up opacity-100" : "opacity-0"
-          }`}
+        <div
+          className={`mb-16 transition-all duration-700 ${inView ? "fade-up opacity-100" : "opacity-0"}`}
         >
-          Modalities
-        </p>
+          <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-white/25 mb-4">
+            Modalities
+          </p>
+          <h2
+            className="font-mono tracking-tight text-white"
+            style={{ fontSize: "clamp(1.7rem, 3.2vw, 2.6rem)" }}
+          >
+            Expert knowledge comes in many forms.
+          </h2>
+        </div>
         <div className="divide-y divide-white/10 border-t border-white/10">
           {rows.map((r, i) => (
             <div
               key={r.label}
-              className={`flex flex-col md:flex-row md:items-center gap-4 md:gap-0 py-7 transition-all duration-700 ${
+              className={`flex flex-col md:flex-row md:items-center gap-4 md:gap-0 py-8 transition-all duration-700 ${
                 inView ? "fade-up opacity-100" : "opacity-0"
               }`}
               style={{ animationDelay: `${i * 0.08}s` }}
             >
-              <span className="font-mono text-base md:text-lg font-bold tracking-tight w-48 shrink-0 text-white">
+              <span
+                className="font-mono font-bold tracking-tight w-52 shrink-0 text-white"
+                style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)" }}
+              >
                 {r.label}
               </span>
               <span className="font-sans text-white/40 leading-relaxed" style={{ fontSize: "clamp(0.875rem, 1.3vw, 1rem)" }}>
@@ -389,9 +409,6 @@ function Contact() {
             Join as a domain expert ↗
           </a>
         </div>
-        <p className="mt-8 font-mono text-[11px] text-black/30 tracking-wide">
-          pragya@heyrubric.ai
-        </p>
       </div>
     </section>
   );
@@ -403,13 +420,13 @@ function Footer() {
     <footer className="border-t border-black/10 py-7 px-6 md:px-10">
       <div className="max-w-[1120px] mx-auto flex items-center justify-between">
         <div className="flex items-center gap-5">
-          <span className="font-mono font-bold text-sm">Rubric</span>
+          <span className="font-mono font-bold text-sm">Rubric AI</span>
           <span className="text-black/15">·</span>
           <span className="font-mono text-[11px] text-black/30">© 2025</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="font-mono text-[11px] text-black/30 tracking-wide">Backed by</span>
-          <span className="inline-flex items-center justify-center w-5 h-5 bg-[#FF6600] text-white font-bold text-[10px] font-mono">Y</span>
+          <YCLogo size={18} />
         </div>
       </div>
     </footer>
