@@ -161,7 +161,7 @@ function Problem() {
           </p>
           <h2
             className="font-mono tracking-tight leading-snug"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
+            style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)" }}
           >
             Crowdsourced feedback breaks down in specialized domains.
           </h2>
@@ -235,7 +235,7 @@ function WhatWeBuild() {
               <div className="space-y-4">
                 <h3
                   className="font-mono tracking-tight text-white"
-                  style={{ fontSize: "clamp(1.7rem, 3vw, 2.6rem)" }}
+                  style={{ fontSize: "clamp(2rem, 3.8vw, 3.2rem)" }}
                 >
                   {item.title}
                 </h3>
@@ -272,7 +272,7 @@ function Research() {
           <div className="flex items-start justify-between gap-6 flex-wrap">
             <h2
               className="font-mono tracking-tight leading-snug max-w-2xl"
-              style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
+              style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)" }}
             >
               WHBench: A Women&rsquo;s Health Benchmark<br className="hidden md:block" /> for Evaluating Frontier LLMs
             </h2>
@@ -344,7 +344,7 @@ function Modalities() {
           </p>
           <h2
             className="font-mono tracking-tight text-white"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}
+            style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)" }}
           >
             Expert knowledge comes in many forms.
           </h2>
@@ -359,7 +359,7 @@ function Modalities() {
               style={{ animationDelay: `${i * 0.08}s` }}
             >
               <span
-                className="font-mono font-bold tracking-tight w-52 shrink-0 text-white"
+                className="font-mono font-bold tracking-tight w-48 shrink-0 text-white"
                 style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)" }}
               >
                 {r.label}
@@ -387,7 +387,7 @@ function Contact() {
       >
         <h2
           className="font-mono tracking-tight leading-[1.05] mb-10"
-          style={{ fontSize: "clamp(2.2rem, 5.5vw, 4.8rem)" }}
+          style={{ fontSize: "clamp(3rem, 7vw, 6.4rem)" }}
         >
           Let&rsquo;s work<br />together.
         </h2>
