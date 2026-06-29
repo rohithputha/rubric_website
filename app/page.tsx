@@ -70,8 +70,8 @@ function Hero() {
       <div className="max-w-[1120px] mx-auto w-full flex-1 flex flex-col justify-center py-24 md:py-0">
         {/* YC badge */}
         <div className="flex items-center gap-2 mb-8 fade-up" style={{ animationDelay: "0.05s" }}>
-          <YCLogo size={16} />
-          <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-black/45">Backed by Y Combinator</span>
+          <YCLogo size={22} />
+          <span className="font-mono text-[13px] uppercase tracking-[0.22em] text-black/45">Backed by Y Combinator</span>
         </div>
 
         {/* headline */}
