@@ -155,19 +155,16 @@ function Problem() {
           inView ? "fade-up opacity-100" : "opacity-0"
         }`}
       >
-        <div className="space-y-5">
-          <h2
-            className="font-mono tracking-tight leading-[1.0] text-black"
-            style={{ fontSize: "clamp(2.8rem, 5.5vw, 4.8rem)" }}
-          >
+        <div className="space-y-4">
+          <p className="font-mono text-sm font-bold uppercase tracking-widest text-black/60">
             The problem
-          </h2>
-          <p
-            className="font-mono text-black/40 leading-snug"
-            style={{ fontSize: "clamp(0.95rem, 1.4vw, 1.15rem)" }}
+          </p>
+          <h2
+            className="font-mono tracking-tight leading-snug"
+            style={{ fontSize: "clamp(1.7rem, 3.2vw, 2.6rem)" }}
           >
             Crowdsourced feedback breaks down in specialized domains.
-          </p>
+          </h2>
         </div>
         <div className="space-y-5 text-black/55 leading-[1.8]" style={{ fontSize: "clamp(0.95rem, 1.4vw, 1.05rem)" }}>
           <p>
@@ -218,14 +215,13 @@ function WhatWeBuild() {
   return (
     <section ref={ref} className="bg-black text-white py-28 md:py-40 px-6 md:px-10">
       <div className="max-w-[1120px] mx-auto">
-        <h2
-          className={`font-mono tracking-tight leading-[1.0] text-white mb-16 transition-all duration-700 ${
+        <p
+          className={`font-mono text-sm font-bold uppercase tracking-widest text-white/60 mb-16 transition-all duration-700 ${
             inView ? "fade-up opacity-100" : "opacity-0"
           }`}
-          style={{ fontSize: "clamp(2.8rem, 5.5vw, 4.8rem)" }}
         >
           What we build
-        </h2>
+        </p>
         <div className="space-y-0">
           {items.map((item, i) => (
             <div
@@ -239,7 +235,7 @@ function WhatWeBuild() {
               <div className="space-y-4">
                 <h3
                   className="font-mono tracking-tight text-white"
-                  style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)" }}
+                  style={{ fontSize: "clamp(1.4rem, 2.2vw, 1.8rem)" }}
                 >
                   {item.title}
                 </h3>
@@ -270,19 +266,16 @@ function Research() {
         <div
           className={`mb-16 transition-all duration-700 ${inView ? "fade-up opacity-100" : "opacity-0"}`}
         >
-          <h2
-            className="font-mono tracking-tight leading-[1.0] text-black mb-4"
-            style={{ fontSize: "clamp(2.8rem, 5.5vw, 4.8rem)" }}
-          >
+          <p className="font-mono text-sm font-bold uppercase tracking-widest text-black/60 mb-4">
             Research
-          </h2>
+          </p>
           <div className="flex items-start justify-between gap-6 flex-wrap">
-            <p
-              className="font-mono text-black/40 leading-snug max-w-2xl"
-              style={{ fontSize: "clamp(0.95rem, 1.4vw, 1.15rem)" }}
+            <h2
+              className="font-mono tracking-tight leading-snug max-w-2xl"
+              style={{ fontSize: "clamp(1.7rem, 3.2vw, 2.6rem)" }}
             >
-              WHBench: A Women&rsquo;s Health Benchmark for Evaluating Frontier LLMs
-            </p>
+              WHBench: A Women&rsquo;s Health Benchmark<br className="hidden md:block" /> for Evaluating Frontier LLMs
+            </h2>
             <a
               href="/whbench-paper.pdf"
               target="_blank"
@@ -346,18 +339,15 @@ function Modalities() {
         <div
           className={`mb-16 transition-all duration-700 ${inView ? "fade-up opacity-100" : "opacity-0"}`}
         >
-          <h2
-            className="font-mono tracking-tight leading-[1.0] text-white mb-4"
-            style={{ fontSize: "clamp(2.8rem, 5.5vw, 4.8rem)" }}
-          >
+          <p className="font-mono text-sm font-bold uppercase tracking-widest text-white/60 mb-4">
             Modalities
-          </h2>
-          <p
-            className="font-mono text-white/35"
-            style={{ fontSize: "clamp(0.95rem, 1.4vw, 1.15rem)" }}
+          </p>
+          <h2
+            className="font-mono tracking-tight text-white"
+            style={{ fontSize: "clamp(1.7rem, 3.2vw, 2.6rem)" }}
           >
             Expert knowledge comes in many forms.
-          </p>
+          </h2>
         </div>
         <div className="divide-y divide-white/10 border-t border-white/10">
           {rows.map((r, i) => (
