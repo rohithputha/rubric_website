@@ -69,9 +69,12 @@ function Hero() {
     <section className="min-h-screen flex flex-col justify-between pt-14 px-6 md:px-10">
       <div className="max-w-[1120px] mx-auto w-full flex-1 flex flex-col justify-center py-24 md:py-0">
         {/* YC badge */}
-        <div className="flex items-center gap-2 mb-8 fade-up" style={{ animationDelay: "0.05s" }}>
-          <YCLogo size={16} />
-          <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-black/45">Backed by Y Combinator</span>
+        <div className="mb-10 fade-up" style={{ animationDelay: "0.05s" }}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 88" style={{ width: "180px", height: "auto" }}>
+            <path d="M91 66.2H66.2V25.1H55.8V67l10.8 8.5h34.9V25.1H91zm35.5-53.7h10.4v63h-10.4zM179 25.1h-22.7l-13.1 8.5v33.3l10.8 8.5h35.4V12.5H179zm0 41.1h-25.4V34.5H179zM47.9 38.5V21l-10.8-8.5H0v63h36.6L49.7 67V46.3l-6.2-4.9zM10.4 21.8h26.9v15.9H10.4zm28.7 44.4H10.4V47.1H39v19.1Zm69.2-53.7h10.4v9.3h-10.4zm0 12.6h10.4v50.4h-10.4zm181.9-12.6h10.4v9.3h-10.4zm0 12.6h10.4v50.4h-10.4zm63.4 0V12.5h-10.5v63h10.5v-41h24.8v41h10.4V33.6L378 25.1zm-79.6 0-6.1 41.1h-4.2l-6.8-31.7h-14.1L236 66.2h-4.2l-6.2-41.1h-10.4l8 50.4h19.2l6.8-31.7h1.3l6.8 31.7h19.2l8-50.4zm63.4 41.1h-19.8V34.5h18.3v-9.4h-18.3V12.5l-10.4 6.8v46.9l11.8 9.3h18.4z" fill="#1a1a1a"/>
+            <path d="m448.9 0-39.7 25.8v16.4l21.2 16.6L470 33V16.6z" fill="#ff1e00"/>
+            <path d="M470 57.7V44.9l-5-3.9-34.6 22.5-21.2-16.6v20L427.1 81v6.7l.5.3 3.7-5.1z" fill="#ff1e00"/>
+          </svg>
         </div>
 
         {/* headline */}
